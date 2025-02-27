@@ -4,17 +4,17 @@
 
 @extends('layouts.front')
 
-@section('popularNews')
-    @foreach ($popular_news as $news)
+{{--@section('popularNews')--}}
+{{--    @foreach ($popular_news as $news)--}}
 
-        <div class="popular-grid">
-            <a href="single.html"><img src="{{asset('images/popular-4.jpg')}}" alt="" /></a>
-            <a class="title" href="single.html">{{$news->title}}</a>
-            <p>On {{ $news->created_at }} <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>{{ $news->comments}} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>{{ $news->views }} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>{{ $news->count_likes}}</a></p>
-        </div>
+{{--        <div class="popular-grid">--}}
+{{--            <a href="single.html"><img src="{{asset('images/popular-4.jpg')}}" alt="" /></a>--}}
+{{--            <a class="title" href="single.html">{{$news->title}}</a>--}}
+{{--            <p>On {{ $news->created_at }} <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>{{ $news->comments}} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>{{ $news->views }} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>{{ $news->count_likes}}</a></p>--}}
+{{--        </div>--}}
 
-    @endforeach
-@endsection
+{{--    @endforeach--}}
+{{--@endsection--}}
 
 
 @section('category')
@@ -36,28 +36,28 @@
 
 
 
-@section('popular')
-    @foreach ($popular_articles as $article)
+{{--@section('popular')--}}
+{{--    @foreach ($popular_articles as $article)--}}
 
-        <div class="popular-post-grid">
-            <div class="post-img">
-                <a href="single.html"><img src="{{$article->image}}" alt="" /></a>
-            </div>
-            <div class="post-text">
-                <a class="pp-title" href="single.html"> {{$article->title}}</a>
+{{--        <div class="popular-post-grid">--}}
+{{--            <div class="post-img">--}}
+{{--                <a href="single.html"><img src="{{$article->image}}" alt="" /></a>--}}
+{{--            </div>--}}
+{{--            <div class="post-text">--}}
+{{--                <a class="pp-title" href="single.html"> {{$article->title}}</a>--}}
 
-                <p>On {{ $article->created_at }} <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>{{ $article->comments}} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>{{ $article->views }} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>{{ $article->count_likes}}</a></p>
-            </div>
-            <div class="article-text">
+{{--                <p>On {{ $article->created_at }} <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>{{ $article->comments}} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>{{ $article->views }} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>{{ $article->count_likes}}</a></p>--}}
+{{--            </div>--}}
+{{--            <div class="article-text">--}}
 
-                 <p>{{ $article->content }}.....</p>
-                <a href="/about/{{$article->id}}"></a>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    @endforeach
-@endsection
+{{--                 <p>{{ $article->content }}.....</p>--}}
+{{--                <a href="/about/{{$article->id}}"></a>--}}
+{{--                <div class="clearfix"></div>--}}
+{{--            </div>--}}
+{{--            <div class="clearfix"></div>--}}
+{{--        </div>--}}
+{{--    @endforeach--}}
+{{--@endsection--}}
 
 
 
@@ -75,7 +75,7 @@
             </div>
             <div class="article-right">
                 <div class="article-title">
-                    <p>On {{ $article->created_at }} <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>{{ $article->comments}} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>{{ $article->views }} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>{{ $article->count_likes}}</a></p>
+                    <p>On {{ $article->created_at }} <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>{{ $article->comments_count}} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>{{ $article->views }} </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>{{ $article->count_likes}}</a></p>
                     <a class="title" href="/about/{{$article->id}}">{{ $article->title }} </a>
                 </div>
                 <div class="article-text">
