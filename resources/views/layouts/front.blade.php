@@ -47,7 +47,7 @@
         <div class="wrap">
             <div class="top-menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -77,7 +77,7 @@
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="active"><a href="/">Home</a></li>
                             <li><a href="sports.html">Sports</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entertainment<b class="caret"></b></a>
@@ -193,9 +193,7 @@
                 </div>
             </div>
             <div class="articles">
-                <header>
-                    <h3 class="title-head">All around the world</h3>
-                </header>
+
 
 
 
@@ -212,7 +210,7 @@
 
 
 
-                @yield('category')
+                <x-category-component/>
 
 
 
@@ -239,7 +237,7 @@
 
 
 
-                                        @yield('popular')
+                                        <x-top/>
 
 
 
@@ -459,33 +457,7 @@
                 </div>
             </div>
             <div class="secound_half">
-                <div class="tags">
-                    <header>
-                        <h3 class="title-head">Tags</h3>
-                    </header>
-                    <p>
-                        <a class="tag1" href="single.html">At vero eos</a>
-                        <a class="tag2" href="single.html">doloremque</a>
-                        <a class="tag3" href="single.html">On the other</a>
-                        <a class="tag4" href="single.html">pain was</a>
-                        <a class="tag5" href="single.html">rationally encounter</a>
-                        <a class="tag6" href="single.html">praesentium voluptatum</a>
-                        <a class="tag7" href="single.html">est, omnis</a>
-                        <a class="tag8" href="single.html">who are so beguiled</a>
-                        <a class="tag9" href="single.html">when nothing</a>
-                        <a class="tag10" href="single.html">owing to the</a>
-                        <a class="tag11" href="single.html">pains to avoid</a>
-                        <a class="tag12" href="single.html">tempora incidunt</a>
-                        <a class="tag13" href="single.html">pursues or desires</a>
-                        <a class="tag14" href="single.html">Bonorum et</a>
-                        <a class="tag15" href="single.html">written by Cicero</a>
-                        <a class="tag16" href="single.html">Ipsum passage</a>
-                        <a class="tag17" href="single.html">exercitationem ullam</a>
-                        <a class="tag18" href="single.html">mistaken idea</a>
-                        <a class="tag19" href="single.html">ducimus qui</a>
-                        <a class="tag20" href="single.html">holds in these</a>
-                    </p>
-                </div>
+
                 <div class="popular-news">
                     <header>
                         <h3 class="title-popular">popular News</h3>
@@ -494,7 +466,7 @@
 
 
 
-                        @yield('popularNews')
+                        <x-popular-news/>
 
 
 

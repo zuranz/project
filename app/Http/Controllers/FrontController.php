@@ -22,14 +22,14 @@ class FrontController extends Controller
     }
     public function index()
     {
-        $categories = Category::all();
-//        $categories = Category::withCount('articles')->get();
-        $articles = Article::paginate(5);
+
+//        $categories = Category::withCount('article')->get();
+        $articles = Article::withCount('comments')->paginate(6);
 
 //        $popular_articles = Article::orderBy('views', 'DESC')->take(5)->get();
-//        $popular_news = News::orderBy('views', 'DESC')->take(3)->get();
-        $this->component->render();
-        return view('front.index',compact('articles','categories'));
+//        $popular_news = News::orderBy('views', 'DESC')->take(3)->get()
+        $category = null;
+        return view('front.index',compact('articles', 'category'));
 //        return view('front.popular',compact('popular_articles'));
 
     }
@@ -44,12 +44,15 @@ class FrontController extends Controller
 
     }
 
-    public function CategoryArticles($id)
+    public function CategoryArticles(Category $category)
     {
 //        $categories = Category::all();
-        $articles = Article::where('category_id', $id)->paginate(5);
+        $articles = $category->articles()->withCount('comments')->paginate(6);
+        //dd($category);
+        //$articles = Article::where('category_id', $id)->paginate(5);
+        //$category =Category::where('id', $id)->first();
 //        $popular_articles = Article::orderBy('views', 'DESC')->take(5)->get();
 //        $popular_news = News::orderBy('views', 'DESC')->take(3)->get();
-        return view('front.index',compact('articles'));
+        return view('front.index',compact('articles', 'category'));
     }
 }

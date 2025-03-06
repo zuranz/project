@@ -2,32 +2,27 @@
 
 namespace App\View\Components;
 
-use App\Models\Article;
 use App\Models\Category;
-use App\Models\News;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Top extends Component
+class CategoryComponent extends Component
 {
-    public $popular_articles;
     /**
      * Create a new component instance.
      */
+    public  $categories;
     public function __construct()
     {
-      $this->popular_articles = Article::orderBy('views', 'DESC')->take(5)->withCount('comments')->get();
+       $this->categories  = Category::withCount('articles')->get();
     }
 
     /**
      * Get the view / contents that represent the component.
      */
-    public function render()
+    public function render(): View|Closure|string
     {
-
-
-
-        return view('components.top');
+        return view('components.category-component');
     }
 }
