@@ -24,7 +24,7 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            'username' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
@@ -42,3 +42,18 @@ class UserFactory extends Factory
         ]);
     }
 }
+
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Article;
+use App\MoonShine\Pages\Article\ArticleIndexPage;
+use App\MoonShine\Pages\Article\ArticleFormPage;
+use App\MoonShine\Pages\Article\ArticleDetailPage;
+
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
+use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\Laravel\Pages\Page;
+use MoonShine\Quill\Fields\Quill;
+use MoonShine\UI\Components\Layout\Box;
+use MoonShine\UI\Fields\ID;
+use MoonShine\UI\Fields\Image;
+use MoonShine\UI\Fields\Text;

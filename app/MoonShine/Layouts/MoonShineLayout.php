@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Layouts;
 
+use App\MoonShine\Resources\ArticleResource;
+use App\MoonShine\Resources\CategoryResource;
+use App\MoonShine\Resources\CommentsResource;
 use MoonShine\Laravel\Layouts\AppLayout;
 use MoonShine\ColorManager\ColorManager;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
@@ -30,16 +33,10 @@ use MoonShine\UI\Components\{Breadcrumbs,
     Layout\TopBar,
     Layout\Wrapper,
     When};
-use App\MoonShine\Resources\CategoryResource;
 use MoonShine\MenuManager\MenuItem;
-use App\MoonShine\Resources\ArticleResource;
-use App\MoonShine\Resources\CommentsResource;
-
 
 final class MoonShineLayout extends AppLayout
 {
-
-
     protected function assets(): array
     {
         return [
@@ -51,9 +48,10 @@ final class MoonShineLayout extends AppLayout
     {
         return [
             ...parent::menu(),
-            MenuItem::make('Kategirii', CategoryResource::class),
+            MenuItem::make('Kategorii', CategoryResource::class),
             MenuItem::make('Statyi', ArticleResource::class),
             MenuItem::make('Kommentiki', CommentsResource::class),
+
         ];
     }
 

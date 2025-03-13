@@ -19,7 +19,7 @@ class NewsCommentsFactory extends Factory
         return [
             'content' => $this->faker->paragraph(),
             //'user_id' => random_int(1,6),
-            'username' =>$this->faker->name(null),
+//            'username' =>$this->faker->name(null),
             'News_id' => random_int(1,10),
             //
         ];

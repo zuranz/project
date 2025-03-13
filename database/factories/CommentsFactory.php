@@ -21,9 +21,9 @@ class CommentsFactory extends Factory
 
 
             'content' => $this->faker->paragraph(),
-           // 'user_id' => random_int(1,6),
-            'username' =>$this->faker->name(null),
-            'article_id' => random_int(1,200),
+            'user_id' => random_int(1,100),
+//            'username' =>$this->faker->name(null),
+            'article_id' => random_int(1,100),
 
             //
         ];

@@ -54,9 +54,11 @@ class CommentsResource extends ModelResource
     {
         return [
             ID::make('Крутой ID', 'id'),
-            Text::make('Чел', 'username'),
+
             Text::make('Содержание', 'content'),
            BelongsTo::make('К статье', 'article', 'title')->searchable(),
+
+//            BelongsTo::make('User', 'user', 'username')->searchable(),
 
         ];
     }
