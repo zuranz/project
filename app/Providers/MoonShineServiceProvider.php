@@ -14,6 +14,7 @@ use App\MoonShine\Resources\MoonShineUserRoleResource;
 use App\MoonShine\Resources\CategoryResource;
 use App\MoonShine\Resources\ArticleResource;
 use App\MoonShine\Resources\CommentsResource;
+use App\MoonShine\Resources\UserResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -33,6 +34,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 CategoryResource::class,
                 ArticleResource::class,
                 CommentsResource::class,
+                UserResource::class,
             ])
             ->pages([
                 ...$config->getPages(),

@@ -58,7 +58,8 @@ class CommentsResource extends ModelResource
             Text::make('Содержание', 'content'),
            BelongsTo::make('К статье', 'article', 'title')->searchable(),
 
-//            BelongsTo::make('User', 'user', 'username')->searchable(),
+            BelongsTo::make('User', 'user', 'username')->searchable(),
+
 
         ];
     }

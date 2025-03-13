@@ -34,6 +34,7 @@ use MoonShine\UI\Components\{Breadcrumbs,
     Layout\Wrapper,
     When};
 use MoonShine\MenuManager\MenuItem;
+use App\MoonShine\Resources\UserResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -52,6 +53,7 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make('Statyi', ArticleResource::class),
             MenuItem::make('Kommentiki', CommentsResource::class),
 
+            MenuItem::make('Users', UserResource::class),
         ];
     }
 
