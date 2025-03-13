@@ -4,14 +4,13 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class User extends Model
+class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -21,7 +20,10 @@ class User extends Model
      * @var array<int, string>
      */
 
-
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comments::class);
+    }
     protected $fillable = [
         'name',
         'email',
@@ -47,9 +49,4 @@ class User extends Model
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    public function comments(): HasMany
-    {
-        return $this->hasMany(Comments::class);
-    }
 }
