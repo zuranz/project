@@ -58,6 +58,7 @@
         </div>
     </div>
     <div class="header-bottom">
+        <input type="submit" value="Login" class="newsletter input" style="color: #84754E; width: 100px; height: 30px; justify-content: end; ">
         <div class="logo text-center">
             <a href="/"><img src="{{asset('images/logo.jpg')}}" alt="" /></a>
         </div>

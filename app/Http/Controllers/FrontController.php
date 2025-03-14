@@ -38,7 +38,8 @@ class FrontController extends Controller
     {
         $article = Article::where('id', $id)->first();
         $categories = Category::where('id', $article->category_id)->first();
-        $comments = Comments::where('article_id', $id)->get();
+        $comments = Comments::where('article_id', $id)->with('user')->get();
+
         return view('front.about',compact('article', 'categories', 'comments' ));
 
 

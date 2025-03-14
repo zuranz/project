@@ -34,7 +34,7 @@
                         <a href="#">
                             <img class="media-object" src="images/c3.jpg" alt="">
                         </a>
-                        <h5><a href="#">{{$comment->username}}</a></h5>
+                        <h5><a href="#">{{$comment->user->username}}</a></h5>
                     </div>
                     <div class="media-body response-text-right">
                         <p>{{$comment->content}}</p>

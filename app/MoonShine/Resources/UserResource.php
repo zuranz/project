@@ -73,6 +73,7 @@ class UserResource extends ModelResource
                 ID::make('Крутой ID', 'id'),
                 Text::make('Имя', 'username'),
                 Text::make('Email', 'email'),
+                Text::make('Пароль', 'password'),
             ]),
         ];
     }
