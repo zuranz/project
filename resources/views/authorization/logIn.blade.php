@@ -1,7 +1,7 @@
 @extends('authorization.authorization')
 
 
-@section('authorization')
+@section('auth')
 <ul class="nav nav-tabs">
     <li class="nav-item">
         <a class="nav-link active" data-toggle="tab" href="/login">Вход</a>
@@ -31,13 +31,13 @@
                 </div>
                 <a href="/password_reset" style="margin-top: 25px">Забыли пароль?</a>
 
-                <input class="btn btn-outline-danger3 w-100" type="submit" value="Войти" name="submit" style="margin-top: 10px; margin-right: 5px">
+                <input class="btn btn-outline-danger w-100" type="submit" value="Войти" name="submit" style="margin-top: 10px; margin-right: 5px">
             </form>
         </div>
     </div>
 
     <div class="tab-pane fade" id="registration">
-        Характеристики товара...
+
     </div>
 </div>
 @endsection

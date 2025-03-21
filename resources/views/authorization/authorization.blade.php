@@ -2,9 +2,15 @@
     <meta charset="UTF-8">
     <title>Вход в аккаунт</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/-/static/fontawesome/css/all.css?v=30bcab9c">
 
+    <script src="/-/static/system.js?v=a27e096d" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/-/static/system.css?v=956d8119">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/assets/vendor/notyf/notyf.min.css">
     <link href="{{asset('css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{asset('js/jquery.min.js')}}"></script>
@@ -46,14 +52,16 @@
 
 </head>
 <body >
+
 <div class="container-fluid text-center ">
 
 
 
-    <div class="card2 " style="width: 30rem; margin-top: 250px; margin-left: 700px">
+
+    <div class="card" style="width: 30%; margin-top: 10%; margin-left: 33%; margin-bottom: 10%; height: 30% ">
 
 
-       @yield('authorization')
+       @yield('auth')
 
 
 
@@ -159,4 +167,5 @@
 
 <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!---->
+<script src="/assets/vendor/notyf/notyf.min.js.js"></script>
 </body></html>
