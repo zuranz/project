@@ -16,4 +16,15 @@ class AuthorizationController extends Controller
 //        return view('front.popular',compact('popular_articles'));
 
     }
+
+
+    public function Registration()
+    {
+
+        return view('authorization.registration');
+//        return view('front.popular',compact('popular_articles'));
+
+    }
+
+
 }

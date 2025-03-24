@@ -2,15 +2,15 @@
     <meta charset="UTF-8">
     <title>Вход в аккаунт</title>
 
-    <link rel="stylesheet" type="text/css" href="/-/static/fontawesome/css/all.css?v=30bcab9c">
+    <link rel="stylesheet" type="text/css" href="{{asset('/-/static/fontawesome/css/all.css?v=30bcab9c')}}">
 
-    <script src="/-/static/system.js?v=a27e096d" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="/-/static/system.css?v=956d8119">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="{{asset('/-/static/system.js?v=a27e096d')}}" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('/-/static/system.css?v=956d8119')}}">
+    <link href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <link href="{{asset('https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css')}}" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/assets/vendor/notyf/notyf.min.css">
+    <link rel="stylesheet" href="{{asset('/assets/vendor/notyf/notyf.min.css')}}">
     <link href="{{asset('css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{asset('js/jquery.min.js')}}"></script>
