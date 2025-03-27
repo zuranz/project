@@ -58,7 +58,7 @@
 
 
 
-    <div class="card" style="width: 30%; margin-top: 10%; margin-left: 33%; margin-bottom: 10%; height: 30% ">
+
 
 
        @yield('auth')
@@ -66,11 +66,11 @@
 
 
 
-    </div>
 
 
 
-    <a  href="/"> Назад на сайт</a>
+
+{{--    <a  href="/"> Назад на сайт</a>--}}
 
 
 </div>

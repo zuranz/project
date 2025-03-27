@@ -7,7 +7,7 @@
 
 
 
-
+    <div class="card" style="width: 30%; margin-top: 10%; margin-left: 33%; margin-bottom: 10%; height: 30% ">
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs">
@@ -25,7 +25,7 @@
         <div class="tab-pane container active" id="home" style="width: 100%; margin-top: 2%">
             <div  >
                 <div class="card-body">
-                    <h3 class="card-title">Вход в аккаунт</h3>
+                    <h3 class="card-title" style="color: #84754e;">Вход в аккаунт</h3>
                     <form action="/toaccount" method="post">
 
                         <div class="text-input">
@@ -40,15 +40,20 @@
                 </span>
                             <input type="password" placeholder="Ваш пароль" name="password" style="margin-top: 10px; margin-bottom: 10px">
                         </div>
-                        <a href="/password_reset" style="margin-top: 25px">Забыли пароль?</a>
+{{--                        <a href="/password_reset" style="margin-top: 25px">Забыли пароль?</a>--}}
+                        <div class="newsletterlog">
+{{--                            <input type="submit" value="Login" style="width: 100px">--}}
+                            <input  type="submit" value="Войти" name="submit" style=" width: 30%">
+                        </div>
 
-                        <input class="btn btn-outline-danger3 w-100" type="submit" value="Войти" name="submit" style="margin-top: 10px; margin-right: 5px">
+
                     </form>
                 </div>
             </div>
         </div>
         <div class="tab-pane container fade" id="menu1">skucvgfdugfcvju</div>
 
+    </div>
     </div>
 
 

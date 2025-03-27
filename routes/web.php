@@ -19,4 +19,8 @@ Route::get('/about/{id}',  [ \App\Http\Controllers\FrontController::class, 'sing
 Route::get('/category/{category}',  [ \App\Http\Controllers\FrontController::class, 'CategoryArticles' ])->name('front.about');
 Route::get('/authorization',  [ \App\Http\Controllers\AuthorizationController::class, 'Authorization' ])->name('authorization.logIn');
 Route::get('/registration',  [ \App\Http\Controllers\AuthorizationController::class, 'Registration' ])->name('authorization.registration');
+Route::post('/toaccount',  [ \App\Http\Controllers\AuthorizationController::class, 'LogToAcc' ]);
 
+
+
+//127.0.0.1
