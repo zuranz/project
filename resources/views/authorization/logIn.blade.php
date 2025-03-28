@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <h3 class="card-title" style="color: #84754e;">Вход в аккаунт</h3>
                     <form action="/toaccount" method="post">
-
+@csrf
                         <div class="text-input">
                 <span class="icon begin">
                     <i class="fas fa-user"></i>

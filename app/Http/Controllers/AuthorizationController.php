@@ -6,9 +6,10 @@ use App\Models\Article;
 use App\Models\Category;
 use App\Models\News;
 use App\Models\Comments;
-use GuzzleHttp\Psr7\ServerRequest;
-use http\Client\Curl\User;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 
 
 class AuthorizationController extends Controller
@@ -32,19 +33,28 @@ class AuthorizationController extends Controller
 
     }
 
-    public function LogToAcc(ServerRequest $request)
+    public function LogToAcc(Request $request)
     {
 
-        $user = $request->getParsedBody();
-        dd($user);
+        $user = $request;
+
         if(isset($user['submit']))
         {
-            $this->goUrl('/');
+            if($user['login'] != null && $user['password'] != null)
+            {
+                $authUser = User::where('email','=', $user['login'])->where('password','=', $user['password'])->get()   ;
+                dd($authUser);
+            }
+
+//            $categories = Category::where('id', $article->category_id)->first();
         }
         else
         {
-            $this->goUrl('/registration');
+            //$this->goUrl('/registration');
+            return redirect()->route('authorization.registration');
+
         }
+
 
 
     }
