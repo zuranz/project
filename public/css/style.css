@@ -3624,9 +3624,6 @@ address a:hover {
 
 
 
-.newsletterlog {
-		padding: 15px;
-}
 
 .newsletterlog input[type="submit"]:hover {
 	background-color: #84754e;
@@ -3646,5 +3643,40 @@ address a:hover {
   }
 
 
+  .newsletterlog {
+	padding: 15px;
+}
+
+.newsletterinlog a[type="button"]:hover {
+background-color: #84754e;
+
+}
+
+.newsletterinlog {
+    padding: -15px;
+  
+    background-color: #fff;
+	display: flex;
+	justify-content: end;
+	margin-top: -55px
+}
+
+.newsletterinlog a[type="button"] {
+color: #fff;
+font-size: 0.9em;
+width: 27%;
+border: none;
+padding: 8px 8px;
+outline: none;
+background: #000;
+  background-color: rgb(0, 0, 0);
+text-transform: uppercase;
+text-align: center;
+margin-left: -5px;
+margin-top: -6px;
+}
+.newsletterinlog {
+	padding: 0px;
+}
 
 

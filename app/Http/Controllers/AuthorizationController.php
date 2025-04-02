@@ -43,7 +43,20 @@ class AuthorizationController extends Controller
             if($user['login'] != null && $user['password'] != null)
             {
                 $authUser = User::where('email','=', $user['login'])->where('password','=', $user['password'])->get()   ;
-                dd($authUser);
+
+//                dd($authUser);
+                if($authUser)
+                {
+                    return redirect()->route('front.index');
+                }
+                else
+                {
+                    return redirect()->route('authorization.registration');
+                }
+            }
+            else
+            {
+                return redirect()->route('front.index');
             }
 
 //            $categories = Category::where('id', $article->category_id)->first();

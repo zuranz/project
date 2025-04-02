@@ -60,11 +60,11 @@
 
 
     <div class="header-bottom">
-        <div class=" newsletter conten">
-            <input type="submit" value="Login" style="width: 100px">
+        <div class="newsletterinlog"  >
+            <a  href="/authorization" type="button"  style="width: 100px; text-decoration: none" >Login</a>
 
         </div>
-
+{{--        value="Login"--}}
         <div class="logo text-center">
             <a href="/"><img src="{{asset('images/logo.jpg')}}" alt="" /></a>
 
