@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use function Laravel\Prompts\password;
 
 
 class AuthorizationController extends Controller
@@ -38,14 +39,35 @@ class AuthorizationController extends Controller
 
         $user = $request;
 
+        $credentials = $request->validate([
+            'email' => ['required', 'login'],
+            'password' => ['required'],
+        ]);
+        if (Auth::attempt($credentials)) {
+
+            if (Auth::check()) {
+                return redirect()->route('front.index');
+            }
+
+            $request->session()->regenerate();
+
+            return redirect()->route('front.index');
+        }
+
+        return back()->withErrors([
+            'email' => 'Предоставленные учетные данные не соответствуют нашим записям.',
+        ])->onlyInput('email');
+
+
+
         if(isset($user['submit']))
         {
             if($user['login'] != null && $user['password'] != null)
             {
-                $authUser = User::where('email','=', $user['login'])->where('password','=', $user['password'])->get()   ;
+                $authUser = User::where('email','=', $user['login'])->where('password','=', $user['password'])->first()   ;
 
 //                dd($authUser);
-                if($authUser)
+                if($authUser != null)
                 {
                     return redirect()->route('front.index');
                 }
