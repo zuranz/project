@@ -20,6 +20,10 @@ Route::get('/category/{category}',  [ \App\Http\Controllers\FrontController::cla
 Route::get('/authorization',  [ \App\Http\Controllers\AuthorizationController::class, 'Authorization' ])->name('authorization.logIn');
 Route::get('/registration',  [ \App\Http\Controllers\AuthorizationController::class, 'Registration' ])->name('authorization.registration');
 Route::post('/toaccount',  [ \App\Http\Controllers\AuthorizationController::class, 'LogToAcc' ]);
+Route::post('/newcomment/{idart}',  [ \App\Http\Controllers\FrontController::class, 'CreatNewComment' ]);
+Route::get('/outaccount',  [ \App\Http\Controllers\AuthorizationController::class, 'OutAccount' ]);
+Route::Post('/registracc',  [ \App\Http\Controllers\AuthorizationController::class, 'RegistrAcc' ]);
+
 
 
 

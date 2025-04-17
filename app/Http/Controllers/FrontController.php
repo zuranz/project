@@ -6,8 +6,12 @@ use App\Models\Article;
 use App\Models\Category;
 use App\Models\News;
 use App\Models\Comments;
+use App\Models\User;
 use App\View\Components\Top;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Session;
 
 class FrontController extends Controller
 {
@@ -56,4 +60,38 @@ class FrontController extends Controller
 //        $popular_news = News::orderBy('views', 'DESC')->take(3)->get();
         return view('front.index',compact('articles', 'category'));
     }
+
+    public function CreatNewComment(int $idart, Request $request)
+    {
+
+        $comment = $request;
+        if(isset($comment['submit']))
+        {
+            if($comment['content'] != null)
+            {
+
+                $user_id = Session::get('user')->id;
+                DB::table('comments')->insert([
+                    'content' => $comment['content'],
+                    'user_id' => $user_id,
+                    'article_id' => $idart,
+                    'created_at' => now(),
+                ]);
+                return redirect()->back();
+            }
+            else
+            {
+                return redirect()->back();
+            }
+
+        }
+
+    }
+
+
+    public  function authuser(User $user)
+    {
+        return $user->isAdmin;
+    }
+
 }

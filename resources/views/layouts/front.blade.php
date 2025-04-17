@@ -55,15 +55,22 @@
             </div>
 
             <div class="clearfix"></div>
+
+        </div>
+        <div class="newsletterinlog"  >
+            @if(session('user'))
+               <p style="margin-right: 15px; color: #fff"> {{session('user.username')}}</p>
+                <a  href="/outaccount" type="button"  style="width: 50px; text-decoration: none" >Out</a>
+            @else
+                <a  href="/authorization" type="button"  style="width: 100px; text-decoration: none" >Login</a>
+            @endif
+
         </div>
     </div>
 
 
     <div class="header-bottom">
-        <div class="newsletterinlog"  >
-            <a  href="/authorization" type="button"  style="width: 100px; text-decoration: none" >Login</a>
 
-        </div>
 {{--        value="Login"--}}
         <div class="logo text-center">
             <a href="/"><img src="{{asset('images/logo.jpg')}}" alt="" /></a>

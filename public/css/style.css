@@ -3653,19 +3653,21 @@ background-color: #84754e;
 }
 
 .newsletterinlog {
-    padding: -15px;
+    padding: 0px;
   
-    background-color: #fff;
+    background-color: transparent;
 	display: flex;
 	justify-content: end;
-	margin-top: -55px
+	margin-top: -20px;
+	margin-right: 20px;
+	margin-bottom: -8px;
 }
 
 .newsletterinlog a[type="button"] {
 color: #fff;
 font-size: 0.9em;
 width: 27%;
-border: none;
+border: 10px #84754e;
 padding: 8px 8px;
 outline: none;
 background: #000;
@@ -3674,6 +3676,7 @@ text-transform: uppercase;
 text-align: center;
 margin-left: -5px;
 margin-top: -6px;
+margin-bottom: 0px;
 }
 .newsletterinlog {
 	padding: 0px;

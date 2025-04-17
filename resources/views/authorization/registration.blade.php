@@ -47,7 +47,7 @@
 
 
 
-<div class="card" style="width: 30%; margin-top: 10%; margin-left: 33%; margin-bottom: 10%; height: 33% ">
+<div class="card" style="width: 30%; margin-top: 10%; margin-left: 33%; margin-bottom: 10%; height: 38% ">
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs">
@@ -94,10 +94,10 @@
 
 {{--   Active  --}}
         <div class="tab-pane container active" id="menu1" style="width: 100%; margin-top: 2%">
-            <div class="card-body">
+            <div class="card-body" >
                 <h3 class="card-title" style="color: #84754e;">Регистрация</h3>
-                <form action="/accountregistr" method="POST">
-
+                <form action="/registracc" method="POST">
+                    @csrf
                     <div class="text-input">
                 <span class="icon begin">
                     <i class="fas fa-user"></i>
@@ -119,11 +119,18 @@
                         <input type="password" placeholder="Повторите пароль" name="twopassword" style="margin-top: 10px; margin-bottom: 10px">
                     </div>
 
+                    <div class="text-input">
+                <span class="icon begin">
+                    <i class="fas fa-user"></i>
+                </span>
+                        <input type="text" placeholder="Придумайте или введите имя" name="name"  style="margin-top: 20px; width: 230px" >
+                    </div>
+
 
 
                     <div class="newsletterlog">
                         {{--                            <input type="submit" value="Login" style="width: 100px">--}}
-                        <input  type="submit" value="Войти" name="submit" style=" width: 30%; margin-bottom: 10px">
+                        <input  type="submit" value="Зарегистрироваться" name="submit" style=" width: 40%; margin-bottom: 10px">
                     </div>
                 </form>
             </div>
@@ -133,3 +140,4 @@
 </div>
 
 @endsection
+{{--newuser@example.org--}}
